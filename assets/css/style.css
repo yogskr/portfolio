@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* =============== Universal Style =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: #334155;
+  --secondary-color: #64748b;
+  --dark-color: #0f172a;
+  --hover-color: #14b8a6;
+}
+
+/* =============== Navigation Style =============== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 9999;
+  box-shadow: 0 1px 10px 2px rgba(162, 162, 167, 0.3);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+}
+
+.nav-bar.scrolled {
+  box-shadow: 0 1px 10px 2px rgba(162, 162, 167, 0.3);
+}
+
+.logo-text {
+  color: var(--dark-color);
+  font-family: 'Cascadia Code', monospace;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav-link:hover {
+  color: var(--hover-color);
+}
+
+/* =============== Hamburger Style =============== */
+.hamburger-menu {
+  cursor: pointer;
+}
+
+.line {
+  height: 2px;
+  width: 25px;
+  margin: 0.4rem 0;
+  background: #000000;
+  transition: transform 0.5s ease;
+}
+
+.change .line1:nth-child(1) {
+  transform: rotate(-43deg) translate(-5px, 6px);
+}
+
+.change .line2:nth-child(2) {
+  opacity: 0;
+}
+
+.change .line3:nth-child(3) {
+  transform: rotate(43deg) translate(-5px, -6px);
+}
+
+/* =============== Main Style =============== */
+main {
+  margin-top: 10rem;
+  max-height: 100vh;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 35rem;
+}
+
+article h1 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.text-highlight {
+  color: var(--hover-color);
+}
+
+article h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+article p {
+  color: var(--dark-color);
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: var(--hover-color);
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 9rem;
+  padding: 0.7rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* =============== Aside Style =============== */
+aside {
+  width: 100%;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 40px;
+}
+
+img {
+  width: 80%;
+  border-radius: 50%;
+  box-shadow: -2px 4px 10px 2px rgba(42, 42, 44, 0.4);
+  background-color: var(--hover-color);
+}
+
+svg {
+  width: 100%;
+  max-width: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+svg:hover {
+  fill: var(--hover-color);
+}
+
+/* =============== Responsive Style =============== */
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  nav {
+    max-width: 85%;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    max-width: 85%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    max-width: 75%;
+  }
+
+  .desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.4rem 0;
+    gap: 2rem;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  main {
+    margin-top: 15rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  aside {
+    margin-bottom: 0;
+  }
+
+  article h1 {
+    font-size: 3rem;
+  }
+
+  article h4 {
+    font-size: 1.5rem;
+  }
+
+  article p {
+    font-size: 1rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
