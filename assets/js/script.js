@@ -17,7 +17,7 @@ document.addEventListener('scroll', () => {
   const dropdown = document.getElementById('dropdown');
   const logo = document.querySelector('.logo-text');
   const hamburgerLine = document.querySelectorAll('.line');
-  const navItem = document.querySelectorAll('.nav-link');
+  const desktopNavLink = document.querySelectorAll('.desktop-nav-link');
   const scrollPosition = window.scrollY;
 
   if (scrollPosition > 0) {
@@ -28,6 +28,10 @@ document.addEventListener('scroll', () => {
     for (let i = 0; i < hamburgerLine.length; i++) {
       hamburgerLine[i].style.backgroundColor = '#ffffff';
     }
+
+    for (let i = 0; i < desktopNavLink.length; i++) {
+      desktopNavLink[i].style.color = '#ffffff';
+    }
   } else {
     header.classList.remove('scrolled');
     dropdown.classList.remove('scrolled');
@@ -37,8 +41,8 @@ document.addEventListener('scroll', () => {
       hamburgerLine[i].style.backgroundColor = '';
     }
 
-    for (let i = 0; i < navItem.length; i++) {
-      navItem[i].style.color = '';
+    for (let i = 0; i < desktopNavLink.length; i++) {
+      desktopNavLink[i].style.color = '';
     }
   }
 });
