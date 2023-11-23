@@ -17,6 +17,10 @@
   --fill-color: #0284c7;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* =============== General Style ============ */
 p {
   font-weight: 500;
@@ -31,7 +35,8 @@ p {
 }
 
 .about,
-.portfolio {
+.portfolio,
+.contact-header {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -45,14 +50,16 @@ p {
 }
 
 .about-text h2,
-.portfolio-text h2 {
+.portfolio-text h2,
+.contact-text h2 {
   color: var(--fill-color);
   text-transform: uppercase;
   font-size: 1rem;
 }
 
 .about-text h3,
-.portfolio-text h3 {
+.portfolio-text h3,
+.contact-text h3 {
   color: var(--primary-color);
   font-weight: 700;
   font-size: 1.5rem;
@@ -60,7 +67,8 @@ p {
 }
 
 .about-text p,
-.portfolio-text p {
+.portfolio-text p,
+.contact-text p {
   color: var(--dark-color);
 }
 
@@ -215,6 +223,10 @@ button {
   font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
+}
+
+button a {
+  color: inherit;
 }
 
 button:hover {
@@ -382,6 +394,15 @@ aside {
   margin-bottom: 10px;
 }
 
+.porto-item img:hover {
+  scale: 0.98;
+  transition: all 0.3s ease-in-out;
+}
+
+.porto-item h4 {
+  margin-bottom: 5px;
+}
+
 .porto-item h4 a {
   color: var(--dark-color);
   font-size: 1.2rem;
@@ -393,6 +414,118 @@ aside {
 
 .porto-item p {
   color: var(--secondary-color);
+}
+
+/* =============== Contact Style =============== */
+.contact-section {
+  background-color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.contact-text {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+form {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+input {
+  padding: 8px 7px;
+}
+
+textarea {
+  padding: 7px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.name,
+.email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* =============== Footer Style =============== */
+footer {
+  background-color: #0f172a;
+}
+
+.footer-container {
+  color: #cbd5e1;
+  padding: 1rem 2rem;
+  margin-top: 10rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-quote {
+  margin-bottom: 20px;
+}
+
+.footer-quote h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #bae6fd;
+}
+
+.footer-quote blockquote {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+.footer-text a {
+  color: inherit;
+}
+
+.footer-text a:hover {
+  color: var(--fill-color);
+}
+
+.footer-icon svg {
+  fill: #db2777;
 }
 
 /* =============== Responsive Style =============== */
@@ -435,12 +568,24 @@ aside {
     margin-bottom: 10rem;
   }
 
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .portfolio-section {
     padding: 0;
   }
 
+  .contact-section {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
   .aboutme-section,
-  .portfolio-section {
+  .portfolio-section,
+  .contact-section {
     text-align: center;
   }
 
@@ -449,8 +594,15 @@ aside {
     width: 85%;
   }
 
+  .contact-container {
+    width: 35rem;
+    max-width: 100%;
+  }
+
   .about-text,
-  .portfolio-text {
+  .portfolio-text,
+  .contact-text,
+  form {
     padding: 0;
   }
 
@@ -458,6 +610,8 @@ aside {
     box-shadow: -2px 2px 10px 2px rgba(42, 42, 44, 0.4);
     border-radius: 10px;
     background-color: #ffffff;
+    width: 40rem;
+    max-width: 100%;
   }
 
   .frontend-skill h4 {
@@ -466,12 +620,14 @@ aside {
   }
 
   .about-text h2,
-  .portfolio-text h2 {
+  .portfolio-text h2,
+  .contact-text h2 {
     font-size: 1.1rem;
   }
 
   .about-text h3,
-  .portfolio-text h3 {
+  .portfolio-text h3,
+  .contact-text h3 {
     font-size: 2rem;
   }
 
@@ -487,6 +643,10 @@ aside {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 32px;
+  }
+
+  .footer-quote {
+    width: 40rem;
   }
 }
 
@@ -561,7 +721,8 @@ aside {
   }
 
   .about-text,
-  .portfolio-text {
+  .portfolio-text,
+  .contact-text {
     width: 75%;
   }
 }
@@ -586,6 +747,10 @@ aside {
 }
 
 @media screen and (min-width: 1440px) {
+  html {
+    font-size: 17px;
+  }
+
   nav {
     width: 70%;
   }
@@ -620,8 +785,11 @@ aside {
     width: 70%;
   }
 
-  .about-container,
-  .portfolio-container {
+  .about-container {
     width: 70%;
+  }
+
+  .portfolio-container {
+    width: 60%;
   }
 }

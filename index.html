@@ -25,16 +25,16 @@
         <!-- Desktop Navigation Start -->
         <ul class="desktop desktop-hidden nav-menu">
           <li class="nav-item">
-            <a href="#" class="desktop-nav-link">Home</a>
+            <a href="#home" class="desktop-nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="desktop-nav-link">About</a>
+            <a href="#about" class="desktop-nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="desktop-nav-link">Portfolio</a>
+            <a href="#portfolio" class="desktop-nav-link">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="desktop-nav-link">Contact</a>
+            <a href="#contact" class="desktop-nav-link">Contact</a>
           </li>
         </ul>
         <!-- Desktop Navigation End -->
@@ -43,16 +43,16 @@
         <div id="dropdown" class="dropdown">
           <ul id="mobile" class="mobile nav-menu">
             <li class="nav-item">
-              <a href="#" class="mobile-nav-link">Home</a>
+              <a href="#home" class="mobile-nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="mobile-nav-link">Skills</a>
+              <a href="#about" class="mobile-nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="mobile-nav-link">Portfolio</a>
+              <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="mobile-nav-link">Contact</a>
+              <a href="#contact" class="mobile-nav-link">Contact</a>
             </li>
           </ul>
         </div>
@@ -64,7 +64,7 @@
     <!-- Main Start -->
     <main>
       <!-- Hero Section Start -->
-      <div class="hero-section">
+      <div id="home" class="hero-section">
         <div class="hero-container">
           <aside>
             <img
@@ -121,14 +121,14 @@
               full-stack websites and web apps. I'm seeking a professional
               career opportunity in the tech industry.
             </p>
-            <button>Contact Me</button>
+            <button><a href="#contact">Contact Me</a></button>
           </article>
         </div>
       </div>
       <!-- Hero Section End -->
 
       <!-- About Section Start -->
-      <div class="aboutme-section">
+      <div id="about" class="aboutme-section">
         <div class="about-container">
           <div class="about">
             <article class="about-text">
@@ -284,7 +284,7 @@
       <!-- About Section End -->
 
       <!-- Portfolio Section Start -->
-      <div class="portfolio-section">
+      <div id="portfolio" class="portfolio-section">
         <div class="portfolio-container">
           <div class="portfolio">
             <article class="portfolio-text">
@@ -331,7 +331,7 @@
               <img src="./assets/images/portfolio-3.png" alt="" />
               <h4>
                 <a
-                  href="http://yogskr.github.io/tea-cozy"
+                  href="https://github.com/yogskr/tea-cozy"
                   target="_blank"
                   rel="noopener noreferrer">
                   Tea Cozy
@@ -363,12 +363,74 @@
       <!-- Portfolio Section End -->
 
       <!-- Contact Section Start -->
+      <div id="contact" class="contact-section">
+        <div class="contact-container">
+          <div class="contact-header">
+            <article class="contact-text">
+              <h2>Contact Me</h2>
+              <h3>Let's Get In Touch</h3>
+              <p>
+                I look forward to discussing our future project. Let's embark in
+                a journey together!
+              </p>
+            </article>
+          </div>
+          <form action="#" method="post">
+            <div class="form-item name">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name" />
+            </div>
+            <div class="form-item email">
+              <label for="mail">Email:</label>
+              <input type="email" id="mail" name="user_email" />
+            </div>
+            <div class="form-item message">
+              <label for="msg">Message:</label>
+              <textarea
+                id="name"
+                name="user_message"
+                rows="6"
+                cols="32"></textarea>
+            </div>
+            <button class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
       <!-- Contact Section End -->
     </main>
     <!-- Main End -->
 
     <!-- Footer Start -->
-    <footer></footer>
+    <footer>
+      <div class="footer-container">
+        <section class="footer-quote">
+          <h2>Yoga Krisanta</h2>
+          <blockquote>
+            "You see so clear, it's coming into light. Go on, be wrong. 'Cause
+            tomorrow you'll be right." - Go Now, Adam Levine
+          </blockquote>
+        </section>
+        <p class="footer-text">
+          &copy 2023 Made with
+          <span class="footer-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18px">
+              <path
+                d="M20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C5.51545 2.99926 8.09315 2.56029 10.2605 3.44044L6.34315 7.35843L7.75736 8.77264L12 4.53L11.9872 4.51617C11.9918 4.52028 11.9964 4.5244 12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736Z"></path>
+            </svg>
+          </span>
+          by
+          <a
+            href="https://github.com/yogskr"
+            target="_blank"
+            rel="noopener noreferrer">
+            Yoga
+          </a>
+        </p>
+      </div>
+    </footer>
     <!-- Footer End -->
 
     <!-- Custom Script -->
